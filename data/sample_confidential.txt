@@ -1,0 +1,23 @@
+CONFIDENTIAL ENTERPRISE INFRASTRUCTURE REPORT
+Date: 2026-09-15
+Author: Dr. Sanjay Kumar (Lead Platform Architect)
+Contact: sanjay.kumar@enterprise-corp.com | Direct Line: +1-555-839-2041
+Reviewer: Ms. Sarah Connor (Security Operations)
+Reviewer Email: sarah.connor@enterprise-corp.com
+
+1. EXECUTIVE SUMMARY
+Project Titan represents the internal data lakehouse and streaming analytics infrastructure.
+The primary internal gateway is deployed at IP 192.168.1.105 with secondary failover at 10.0.4.52.
+All network traffic between nodes uses TLS 1.3 with mutual authentication.
+
+2. SYSTEM CREDENTIALS AND ARCHITECTURE
+Database replica hosts:
+Primary PostgreSQL instance: 172.16.254.1
+Kafka broker cluster coordinates partitions across internal addresses 10.240.0.11 and 10.240.0.12.
+For any infrastructure incident response, contact Dr. Sanjay Kumar at +1-555-839-2041 or email ops-urgent@enterprise-corp.com.
+
+3. RETRIEVAL AUGMENTED GENERATION (RAG) SPECS
+All internal enterprise queries are answered using hybrid search (FAISS dense vectors + BM25 sparse indices).
+The fusion engine uses Reciprocal Rank Fusion (RRF) with constant k=60 to eliminate score distortion.
+Local LLM inference runs exclusively on Ollama model qwen2.5:3b without transmitting prompt data to external cloud providers.
+Zero-retention policies apply to temporary embedding tensors.
