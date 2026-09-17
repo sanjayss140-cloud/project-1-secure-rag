@@ -4,8 +4,7 @@ from ingestion import DocumentIngestionPipeline
 
 @pytest.fixture
 def ingestion_pipeline():
-    retriever = HybridRetriever()
-    return DocumentIngestionPipeline(retriever)
+    return DocumentIngestionPipeline(retriever=None)
 
 def test_chunk_splitting_and_metadata(ingestion_pipeline):
     text = (

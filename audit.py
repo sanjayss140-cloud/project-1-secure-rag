@@ -4,7 +4,7 @@ import uuid
 import logging
 from typing import List, Tuple, Dict, Any
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 from config import settings
 from models import PIIEntity, AuditRecord
 
@@ -110,7 +110,7 @@ class EnterprisePIIEngine:
         # Create immutable audit record
         record = AuditRecord(
             record_id=str(uuid.uuid4()),
-            timestamp=datetime.utcnow().isoformat(),
+            timestamp=datetime.now(timezone.utc).isoformat(),
             source_document=source_doc,
             detected_entities_count=len(entities),
             entities=entities,

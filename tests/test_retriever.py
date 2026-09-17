@@ -2,7 +2,7 @@ import pytest
 from retriever import HybridRetriever
 from models import DocumentChunk
 
-@pytest.fixture
+@pytest.fixture(scope="module")
 def retriever():
     r = HybridRetriever()
     # Sample synthetic chunks

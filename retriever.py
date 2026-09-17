@@ -22,7 +22,10 @@ class HybridRetriever:
     """
     def __init__(self):
         logger.info("Initializing SentenceTransformer: %s", settings.EMBEDDING_MODEL_NAME)
-        self.encoder = SentenceTransformer(settings.EMBEDDING_MODEL_NAME)
+        try:
+            self.encoder = SentenceTransformer(settings.EMBEDDING_MODEL_NAME, local_files_only=True)
+        except Exception:
+            self.encoder = SentenceTransformer(settings.EMBEDDING_MODEL_NAME)
         self.faiss_index: Optional[faiss.Index] = None
         self.bm25_index: Optional[BM25Okapi] = None
         self.chunks: List[DocumentChunk] = []
