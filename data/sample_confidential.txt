@@ -1,7 +1,7 @@
 CONFIDENTIAL ENTERPRISE INFRASTRUCTURE REPORT
 Date: 2026-09-15
-Author: Dr. Sanjay Kumar (Lead Platform Architect)
-Contact: sanjay.kumar@enterprise-corp.com | Direct Line: +1-555-839-2041
+Author: Dr. Sanjay (Lead Platform Architect)
+Contact: sanjay@enterprise-corp.com | Direct Line: +1-555-839-2041
 Reviewer: Ms. Sarah Connor (Security Operations)
 Reviewer Email: sarah.connor@enterprise-corp.com
 
@@ -14,7 +14,7 @@ All network traffic between nodes uses TLS 1.3 with mutual authentication.
 Database replica hosts:
 Primary PostgreSQL instance: 172.16.254.1
 Kafka broker cluster coordinates partitions across internal addresses 10.240.0.11 and 10.240.0.12.
-For any infrastructure incident response, contact Dr. Sanjay Kumar at +1-555-839-2041 or email ops-urgent@enterprise-corp.com.
+For any infrastructure incident response, contact Dr. Sanjay at +1-555-839-2041 or email ops-urgent@enterprise-corp.com.
 
 3. RETRIEVAL AUGMENTED GENERATION (RAG) SPECS
 All internal enterprise queries are answered using hybrid search (FAISS dense vectors + BM25 sparse indices).

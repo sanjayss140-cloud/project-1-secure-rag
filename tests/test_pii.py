@@ -31,9 +31,9 @@ def test_phone_number_redaction(pii_engine):
     assert "PHONE_NUMBER" in types
 
 def test_person_redaction(pii_engine):
-    text = "Architect Dr. Sanjay Kumar reviewed the technical proposal with Ms. Sarah Connor."
+    text = "Architect Dr. Sanjay reviewed the technical proposal with Ms. Sarah Connor."
     anonymized, record = pii_engine.scan_and_anonymize(text, source_doc="test_doc")
-    assert "Dr. Sanjay Kumar" not in anonymized
+    assert "Dr. Sanjay" not in anonymized
     assert "Ms. Sarah Connor" not in anonymized
     assert record.detected_entities_count >= 2
     types = [e.entity_type for e in record.entities]

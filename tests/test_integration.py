@@ -5,7 +5,7 @@ from ingestion import DocumentIngestionPipeline
 def test_end_to_end_privacy_and_retrieval():
     raw_doc = (
         "Internal Incident Summary:\n"
-        "Lead Responder: Dr. Sanjay Kumar (sanjay.kumar@corp.com, phone: 555-987-6543).\n"
+        "Lead Responder: Dr. Sanjay (sanjay@corp.com, phone: 555-987-6543).\n"
         "Core cluster node at 192.168.10.5 experienced high packet loss.\n"
         "Remediation involved switching cluster traffic to hot-standby node at 10.0.1.25."
     )

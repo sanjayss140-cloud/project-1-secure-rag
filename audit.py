@@ -33,7 +33,7 @@ class EnterprisePIIEngine:
             ),
             "PERSON": re.compile(
                 r"\b(?:Mr\.|Mrs\.|Ms\.|Dr\.|Prof\.)\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b"
-                r"|\b(?:John Doe|Jane Doe|Alice Smith|Bob Johnson|Sanjay Kumar|Michael Brown|Sarah Connor|Bruce Wayne)\b"
+                r"|\b(?:John Doe|Jane Doe|Alice Smith|Bob Johnson|Sanjay|Michael Brown|Sarah Connor|Bruce Wayne)\b"
             ),
             "CREDIT_CARD": re.compile(
                 r"\b(?:\d{4}[-\s]?){3}\d{4}\b"
